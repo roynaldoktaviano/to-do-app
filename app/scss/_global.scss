@@ -5,14 +5,22 @@ html {
 
 *, *::before, *::after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0; 
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Josefin Sans', sans-serif;
+}
 
-    .to-do {
-        
-    }
+.container {
+    padding: 50px 25px;
+}
+
+.circle {
+    width: 22px;
+    height: 22px;
+    border: 1px solid $lightGrayishBlue;
+    border-radius: 50%;
+
 }
