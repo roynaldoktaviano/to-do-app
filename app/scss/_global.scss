@@ -11,6 +11,7 @@ html {
 
 body {
     font-family: 'Josefin Sans', sans-serif;
+    transition: 0.2s ease-in-out;
 }
 
 .container {
@@ -23,4 +24,23 @@ body {
     border: 1px solid $lightGrayishBlue;
     border-radius: 50%;
 
+}
+
+.dark-mode {
+    background-color: $veryDarkBlue;
+
+    input {
+        background-color: $veryDarkDesaturatedBlue;
+        color: white;
+        font-weight: 400;
+    }
+
+    .circle {
+        border-color: $darkGrayishBlue;
+        
+    }
+
+    .to-do {
+        background-image: url(../../images/bg-mobile-dark.jpg);
+    }
 }
