@@ -6,6 +6,10 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    .none {
+        display: none;
+    }
+
     .header {
         display: flex;
         justify-content: space-between;
@@ -44,7 +48,9 @@
         input {
             width: 100%;
             height: 48px;
-            padding: 15px 20px;
+            padding: 15px 55px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 18px;
             border: none;
             border-radius: 5px;
         }

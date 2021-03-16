@@ -34,6 +34,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.to-do .none {
+  display: none;
+}
+
 .to-do .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,7 +92,9 @@ body {
 .to-do .input input {
   width: 100%;
   height: 48px;
-  padding: 15px 20px;
+  padding: 15px 55px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
   border: none;
   border-radius: 5px;
 }
