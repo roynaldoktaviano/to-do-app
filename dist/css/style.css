@@ -21,6 +21,12 @@ body {
   padding: 50px 25px;
 }
 
+@media (min-width: 40em) {
+  .container {
+    padding: 75px 450px;
+  }
+}
+
 .circle {
   width: 22px;
   height: 22px;
@@ -46,6 +52,12 @@ body {
   background-image: url(../../images/bg-mobile-dark.jpg);
 }
 
+@media (min-width: 64em) {
+  .dark-mode .to-do {
+    background-image: url(../../images/bg-desktop-dark.jpg);
+  }
+}
+
 .to-do {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
@@ -54,6 +66,13 @@ body {
   background-image: url(../../images/bg-mobile-light.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 64em) {
+  .to-do {
+    height: 350px;
+    background-image: url(../../images/bg-desktop-light.jpg);
+  }
 }
 
 .to-do .none {
@@ -80,6 +99,12 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+@media (min-width: 64em) {
+  .to-do .header h1 {
+    font-size: 40px;
+  }
 }
 
 .to-do .header a {

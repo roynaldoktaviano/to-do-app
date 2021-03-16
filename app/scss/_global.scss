@@ -16,6 +16,10 @@ body {
 
 .container {
     padding: 50px 25px;
+
+    @include breakpoint-up(medium){
+        padding: 75px 450px;
+    }
 }
 
 .circle {
@@ -42,5 +46,9 @@ body {
 
     .to-do {
         background-image: url(../../images/bg-mobile-dark.jpg);
+
+        @include breakpoint-up(large){
+            background-image: url(../../images/bg-desktop-dark.jpg);
+        }
     }
 }

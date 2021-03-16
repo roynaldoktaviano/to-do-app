@@ -6,6 +6,11 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    @include breakpoint-up(large) {
+        height: 350px;
+        background-image: url(../../images/bg-desktop-light.jpg);
+    }
+
     .none {
         display: none;
     }
@@ -22,6 +27,10 @@
             color: white;
             letter-spacing: 15px;
             height: fit-content;
+
+            @include breakpoint-up(large){
+                font-size: 40px;
+            }
             
         }
     
