@@ -3,6 +3,16 @@ const input = document.querySelector('#todo');
 const label = document.querySelector('.label label');
 const icon = document.querySelector('.icon-img');
 
+// Dark Mode
+icon.addEventListener('click',function(){
+    body.classList.toggle('dark-mode');
+    if(body.classList.contains('dark-mode')){
+        icon.src = "./images/icon-sun.svg"
+    } else {
+        icon.src = "./images/icon-moon.svg"
+    }
+})
+
 // Input Text
 if(!input.value) {
     input.addEventListener("focus",function(){
@@ -14,12 +24,34 @@ if(!input.value) {
     })
 }
 
-// Dark Mode
-icon.addEventListener('click',function(){
-    body.classList.toggle('dark-mode');
-    if(body.classList.contains('dark-mode')){
-        icon.src = "./images/icon-sun.svg"
-    } else {
-        icon.src = "./images/icon-moon.svg"
+// Input To Do
+const list = [];
+input.addEventListener("keyup",function(elem){
+    if(elem.key == "Enter" || elem.keyCode == 13) {
+        list.push(elem.target.value)
+        newList(elem.target.value);
+        elem.target.value = "";
     }
 })
+
+
+// function list
+function newList(value) {
+    const list = document.createElement("div");
+    const listText = document.createElement("p");
+    const listCheck = document.createElement("input");
+    const listLabel = document.createElement("label");
+    const listDelete = document.createElement("span")
+
+    listText.textContent = value;
+    listCheck.type = "checkbox";
+    listCheck.name ="checkbox";
+    listLabel.htmlFor = "checkbox";
+
+    listCheck.addEventListener("click",function(elem){
+        if(elem.checked){
+            elem.checked = false;
+            listText.style.textDecoration = "none";
+        }
+    })
+}
