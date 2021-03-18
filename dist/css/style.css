@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -146,5 +147,52 @@ body {
   border-radius: 5px;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+}
+
+.to-do .lists {
+  margin-top: 32px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(99, 99, 99, 0.3);
+          box-shadow: 0px 0px 10px 0px rgba(99, 99, 99, 0.3);
+}
+
+.to-do .list {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% auto 10%;
+      grid-template-columns: 10% auto 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #e4e5f1;
+}
+
+.to-do .list:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.to-do .active {
+  position: relative;
+  background-image: linear-gradient #57ddff to #c058f3;
+}
+
+.to-do .active::before {
+  position: absolute;
+  content: "ü";
+  width: 10px;
+  height: 10px;
+}
+
+.to-do .delete {
+  cursor: pointer;
+  color: #777a92;
+}
+
+.to-do .delete:hover {
+  color: #393a4c;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,6 +2,7 @@ const body = document.querySelector('body');
 const input = document.querySelector('#todo');
 const label = document.querySelector('.label label');
 const icon = document.querySelector('.icon-img');
+const listItem = document.querySelector('.lists');
 
 // Dark Mode
 icon.addEventListener('click',function(){
@@ -52,6 +53,27 @@ function newList(value) {
         if(elem.checked){
             elem.checked = false;
             listText.style.textDecoration = "none";
+            listCheck.classList.remove("active");
+        } else {
+            elem.checked = true;
+            listText.style.textDecoration = "line-through";
+            listCheck.classList.add("active");
         }
     })
+
+    listDelete.textContent = "X";
+    listDelete.addEventListener("click", function(elem){
+        elem.target.parentElement.remove()
+    })
+
+    list.classList.add("list");
+    listCheck.classList.add("circle");
+    listDelete.classList.add("delete");
+
+    list.appendChild(listCheck);
+    // list.appendChild(listLabel);
+    list.appendChild(listText);
+    list.appendChild(listDelete);
+
+    listItem.appendChild(list);
 }
