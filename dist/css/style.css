@@ -59,6 +59,12 @@ body {
   }
 }
 
+.dark-mode .to-do .list {
+  background-color: #25273c;
+  color: white;
+  border-color: #4d5066;
+}
+
 .to-do {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
@@ -173,6 +179,10 @@ body {
 
 .to-do .list:first-child {
   border-radius: 5px 5px 0 0;
+}
+
+.to-do .list input[type="checkbox"] {
+  display: none;
 }
 
 .to-do .active {

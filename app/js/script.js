@@ -71,7 +71,7 @@ function newList(value) {
     listDelete.classList.add("delete");
 
     list.appendChild(listCheck);
-    // list.appendChild(listLabel);
+    list.appendChild(listLabel);
     list.appendChild(listText);
     list.appendChild(listDelete);
 

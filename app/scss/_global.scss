@@ -50,5 +50,11 @@ body {
         @include breakpoint-up(large){
             background-image: url(../../images/bg-desktop-dark.jpg);
         }
+
+        .list {
+            background-color: $veryDarkDesaturatedBlue;
+            color: white;
+            border-color: $veryDarkGrayishBlueLight ;
+        }
     }
 }
