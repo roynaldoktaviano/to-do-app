@@ -49,17 +49,33 @@ function newList(value) {
     listCheck.name ="checkbox";
     listLabel.htmlFor = "checkbox";
 
-    listLabel.addEventListener("click",function(elem){
-        if(elem.checked){
-            elem.checked = false;
-            listText.style.textDecoration = "none";
-            listLabel.classList.remove("active");
-            listText.style.color = "hsl(235, 21%, 11%);";
-        } else {
-            elem.checked = true;
-            listText.style.textDecoration = "line-through";
-            listLabel.classList.add("active");
-            listText.style.color = "hsl(233, 11%, 84%)";
+    listLabel.addEventListener('click',function(elem){
+        if(body.classList.contains("dark-mode")){ // Dark Mode Status
+            listLabel.classList.toggle("active");
+            listText.style.color = "white";
+            if(!listLabel.classList.contains("active")){ 
+                elem.checked = false;
+                listText.style.textDecoration = "none";
+                listText.style.color = "white";
+            } else {
+                elem.checked = true;
+                listText.style.textDecoration = "line-through";
+                // listLabel.classList.add("active");
+                listText.style.color = "hsl(233, 14%, 35%)";
+        }
+        } else { //Light Mode Status
+            listLabel.classList.toggle("active");
+            listText.style.color = "black";
+            if(!listLabel.classList.contains("active")){ //doesn't checked
+                elem.checked = false;
+                listText.style.textDecoration = "none";
+                listText.style.color = "black";
+            } else {
+                elem.checked = true;
+                listText.style.textDecoration = "line-through";
+                // listLabel.classList.add("active");
+                listText.style.color = "hsl(233, 11%, 84%)";
+        }
         }
     })
 
