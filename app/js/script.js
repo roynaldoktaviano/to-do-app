@@ -60,7 +60,6 @@ function newList(value) {
             } else {
                 elem.checked = true;
                 listText.style.textDecoration = "line-through";
-                // listLabel.classList.add("active");
                 listText.style.color = "hsl(233, 14%, 35%)";
         }
         } else { //Light Mode Status
@@ -73,7 +72,6 @@ function newList(value) {
             } else {
                 elem.checked = true;
                 listText.style.textDecoration = "line-through";
-                // listLabel.classList.add("active");
                 listText.style.color = "hsl(233, 11%, 84%)";
         }
         }
