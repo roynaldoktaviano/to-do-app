@@ -49,15 +49,17 @@ function newList(value) {
     listCheck.name ="checkbox";
     listLabel.htmlFor = "checkbox";
 
-    listCheck.addEventListener("click",function(elem){
+    listLabel.addEventListener("click",function(elem){
         if(elem.checked){
             elem.checked = false;
             listText.style.textDecoration = "none";
-            listCheck.classList.remove("active");
+            listLabel.classList.remove("active");
+            listText.style.color = "hsl(235, 21%, 11%);";
         } else {
             elem.checked = true;
             listText.style.textDecoration = "line-through";
-            listCheck.classList.add("active");
+            listLabel.classList.add("active");
+            listText.style.color = "hsl(233, 11%, 84%)";
         }
     })
 
@@ -67,7 +69,8 @@ function newList(value) {
     })
 
     list.classList.add("list");
-    listCheck.classList.add("circle");
+    // listCheck.classList.add("circle");
+    listLabel.classList.add("circle");
     listDelete.classList.add("delete");
 
     list.appendChild(listCheck);

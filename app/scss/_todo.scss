@@ -105,9 +105,13 @@
 
     .active::before{
         position: absolute;
-        content: "ü";
+        content: "✔";
+        font-size: 13px;    
+        color: white;
         width: 10px;
         height: 10px;
+        // top: -15%;
+        right: 27%;
     }
 
     .delete {

@@ -25,9 +25,13 @@ body {
 .circle {
     width: 22px;
     height: 22px;
-    border: 1px solid $lightGrayishBlue;
+    border: 1.5px solid $lightGrayishBlue;
     border-radius: 50%;
+    cursor: pointer;
 
+    &:hover {
+        border: 2px solid $checkBackground;
+    }
 }
 
 .dark-mode {
